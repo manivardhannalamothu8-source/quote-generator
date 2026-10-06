@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+  color: #222;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+header {
+  text-align: center;
+  padding: 50px 20px 30px;
+}
+
+header h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+header p {
+  color: #666;
+  font-size: 18px;
+}
+
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+.quote-card {
+  background: white;
+  padding: 45px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.quote-mark {
+  font-size: 70px;
+  line-height: 40px;
+}
+
+.quote-card h2 {
+  font-size: 28px;
+  line-height: 1.5;
+  margin: 25px 0;
+}
+
+.author {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+button {
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  background: #222;
+  color: white;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+.history {
+  margin-top: 40px;
+}
+
+.history h2 {
+  margin-bottom: 20px;
+}
+
+.empty {
+  color: #777;
+}
+
+.favorite-card {
+  background: white;
+  padding: 22px;
+  border-radius: 14px;
+  margin-bottom: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+}
+
+.favorite-card p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.favorite-card strong {
+  color: #666;
+}
+
+.delete {
+  display: block;
+  margin-top: 15px;
+  background: #c0392b;
+}
+
+footer {
+  text-align: center;
+  padding: 40px;
+  color: #777;
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 32px;
+  }
+
+  .quote-card {
+    padding: 25px;
+  }
+
+  .quote-card h2 {
+    font-size: 22px;
+  }
+}
