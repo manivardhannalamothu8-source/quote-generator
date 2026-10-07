@@ -3,11 +3,12 @@ const cors = require("cors");
 const Database = require("better-sqlite3");
 
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 app.use(cors());
 app.use(express.json());
 
+// Database
 const db = new Database("quotes.db");
 
 db.prepare(`
@@ -18,6 +19,11 @@ db.prepare(`
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP
   )
 `).run();
+
+// Home route
+app.get("/", (req, res) => {
+  res.send("Quote Generator Backend is running successfully!");
+});
 
 // Get a random quote from the public API
 app.get("/api/quote", async (req, res) => {
@@ -86,6 +92,7 @@ app.delete("/api/favorites/:id", (req, res) => {
   });
 });
 
-app.listen(PORT, () => {
-  console.log(`Backend server running at http://localhost:${PORT}`);
+// Start server
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Backend server running on port ${PORT}`);
 });
